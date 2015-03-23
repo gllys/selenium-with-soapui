@@ -13,7 +13,7 @@ public class LogIn {
 	private WebDriver driver;
 	private DO du;
 //	private Wait waiter;
-	private String Url = "www.piaotai.com";
+	private String Url = "http://www.piaotai.com";
 //
 //	public void BeforeClass()
 //
@@ -38,10 +38,10 @@ public class LogIn {
 
 	}
 
-	public static void main(String arg[]) {
-       
-		System.out.println(new LogIn().LogInTest());
-		
-	}
+//	public static void main(String arg[]) {
+//       
+//		System.out.println(new LogIn().LogInTest());
+//		
+//	}
 
 }
