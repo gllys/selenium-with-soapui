@@ -12,20 +12,9 @@ import DO_source.DO;
 public class LogIn {
 	private WebDriver driver;
 	private DO du;
-//	private Wait waiter;
-	private String Url = "http://www.piaotai.com";
-//
-//	public void BeforeClass()
-//
-//	{
-//
-//		browers_set browser = new browers_set(BrowersType.chrome);
-//		driver = browser.web_driver;
-//		du = new DO(driver);
-//
-//	}
 
-	public String LogInTest() {
+	private String Url = "http://www.piaotai.com";
+	public  String LogInTest() {
 		browers_set browser = new browers_set(BrowersType.chrome);
 		driver = browser.web_driver;
 		du = new DO(driver);   
@@ -35,13 +24,15 @@ public class LogIn {
 		du.what("password").sendKeys("0823letian");
 		du.what("submit").submit();
 		return du.what("title").getText();
+		
 
 	}
+}
 
 //	public static void main(String arg[]) {
 //       
 //		System.out.println(new LogIn().LogInTest());
 //		
 //	}
-
-}
+//
+//}
