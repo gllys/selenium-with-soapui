@@ -1,22 +1,22 @@
 package soapui.login;
-import data_source.BrowersType;
-import data_source.browers_set;
+import datasource.browserstype;
+import datasource.browsersset;
 
-import DO_source.DO;
+import dosource.Do;
 //import wait_source.Wait;
 
-public class LogIn {
+public class login {
 	public static final String URL = "http://www.piaotai.com";
 	
-	private DO du;
+	private Do du;
      
 
 	public  String LogInTest()
 	
 	{
-		browers_set browser = new browers_set(BrowersType.chrome);
+		browsersset browser = new browsersset(browserstype.chrome);
 	    
-		du = new DO(browser.web_driver);   
+		du = new Do(browser.web_driver);   
 		du.getDriver().get(URL);
 		du.what("username").clear();
 		du.what("username").sendKeys("gllysleletian");
