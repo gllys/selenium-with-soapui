@@ -2,20 +2,18 @@ package wait_source;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.google.common.base.Predicate;
 
 public class Wait {
-	private WebDriver driver;//¶¨Òådriver
-    private int timeout =30; //¶¨Òå³¬Ê±Ê±¼äÎª10S
+	private WebDriver driver;//ï¿½ï¿½ï¿½ï¿½driver
+    private int timeout =30; //ï¿½ï¿½ï¿½å³¬Ê±Ê±ï¿½ï¿½Îª10S
 	
 	public Wait(WebDriver driver){
-		this.driver = driver;//±ØÐëÒªÊ¹ÓÃThis,thisÊÇÖ¸Ïòºó¸úµÄdriverÎªÇ°¶¨ÒåµÄwebdriver¶ø²»ÊÇºó¸³ÓèµÄdriver
-        //PageFactory .initElements(driver, this);	-----> ½â¾öÒ³ÃæÔªËØ¹ýÆÚµÄÎÊÌâ	
+		this.driver = driver;//ï¿½ï¿½ï¿½ï¿½ÒªÊ¹ï¿½ï¿½This,thisï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½driverÎªÇ°ï¿½ï¿½ï¿½ï¿½ï¿½webdriverï¿½ï¿½ï¿½ï¿½ï¿½Çºï¿½ï¿½ï¿½ï¿½driver
+        //PageFactory .initElements(driver, this);	-----> ï¿½ï¿½ï¿½Ò³ï¿½ï¿½Ôªï¿½Ø¹ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½	
 	}
 	
 	public void waitForElementPresent(String locator){

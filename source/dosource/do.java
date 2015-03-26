@@ -12,9 +12,33 @@ import wait_source.Wait;;
 public class DO {
 
 	private WebDriver driver;
-	private ParseProperties locator = new ParseProperties(System.getProperty("user.dir")+"\\tools\\locators.properties"); 
+	private ParseProperties locator = new ParseProperties(System.getProperty("user.dir")+"tools\\locators.properties"); 
 	private Wait waiter;
 	
+	public WebDriver getDriver() {
+		return driver;
+	}
+
+	public void setDriver(WebDriver driver) {
+		this.driver = driver;
+	}
+
+	public ParseProperties getLocator() {
+		return locator;
+	}
+
+	public void setLocator(ParseProperties locator) {
+		this.locator = locator;
+	}
+
+	public Wait getWaiter() {
+		return waiter;
+	}
+
+	public void setWaiter(Wait waiter) {
+		this.waiter = waiter;
+	}
+
 	public DO(WebDriver driver){
 		this.driver = driver;	
 		waiter = new Wait(driver);

@@ -8,7 +8,6 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.Properties;
 
-import org.sqlite.SQLiteConfig.Encoding;
 
 public class ParseProperties {
 

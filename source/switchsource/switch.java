@@ -2,7 +2,7 @@ package switch_source;
 import java.util.Set;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
+
 
 
 public class Switch {
@@ -18,13 +18,13 @@ public class Switch {
 	/**
 	 * 
 	 * Description :switch to specific window.
-	 * @author £ºGllys
+	 * @author ï¿½ï¿½Gllys
 	 * @see : 
 	 * @param :partial Title Name of a window.
 	 * @return : void
-	 * @create £º2015-03-10
+	 * @create ï¿½ï¿½2015-03-10
 	 * @exception :
-	 * @version £º1.0
+	 * @version ï¿½ï¿½1.0
 	 */
 	public void toSpecificWindow(String partialTitleName){
 		Set<String> handles = driver.getWindowHandles();
@@ -39,13 +39,13 @@ public class Switch {
 	/**
 	 * 
 	 * Description :switch to specific window.
-	 * @author £ºGllys
+	 * @author ï¿½ï¿½Gllys
 	 * @see : 
 	 * @param :partial Title Name of a window.
 	 * @return : void
-	 * @create £º2015-03-10
+	 * @create ï¿½ï¿½2015-03-10
 	 * @exception :
-	 * @version £º1.0
+	 * @version ï¿½ï¿½1.0
 	 */
 	public void backToCurrentWindow(){
 		driver.switchTo().window(currentwindow);
