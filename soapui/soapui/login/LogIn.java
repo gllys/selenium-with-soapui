@@ -1,4 +1,4 @@
-package SoapUi.LogIn;
+package soapui.login;
 import data_source.BrowersType;
 import data_source.browers_set;
 
