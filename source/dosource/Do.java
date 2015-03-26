@@ -6,14 +6,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import readproperties.ParseProperties;
-import waitsource.Wait;;
+import readproperties.parseproperties;
+import waitsource.wait;;
 
 public class Do {
 
 	private WebDriver driver;
-	private ParseProperties locator = new ParseProperties(System.getProperty("user.dir")+"tools\\locators.properties"); 
-	private Wait waiter;
+	private parseproperties locator = new parseproperties(System.getProperty("user.dir")+"tools\\locators.properties"); 
+	private wait waiter;
 	
 	public WebDriver getDriver() {
 		return driver;
@@ -23,25 +23,25 @@ public class Do {
 		this.driver = driver;
 	}
 
-	public ParseProperties getLocator() {
+	public parseproperties getLocator() {
 		return locator;
 	}
 
-	public void setLocator(ParseProperties locator) {
+	public void setLocator(parseproperties locator) {
 		this.locator = locator;
 	}
 
-	public Wait getWaiter() {
+	public wait getWaiter() {
 		return waiter;
 	}
 
-	public void setWaiter(Wait waiter) {
+	public void setWaiter(wait waiter) {
 		this.waiter = waiter;
 	}
 
 	public Do(WebDriver driver){
 		this.driver = driver;	
-		waiter = new Wait(driver);
+		waiter = new wait(driver);
 	}
 	
 	public WebElement what(String locatorname){

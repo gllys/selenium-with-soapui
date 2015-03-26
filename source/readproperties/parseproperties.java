@@ -9,12 +9,12 @@ import java.io.UnsupportedEncodingException;
 import java.util.Properties;
 
 
-public class ParseProperties {
+public class parseproperties {
 
 	private Properties pro = new Properties();
 	String value = null;
 
-	public ParseProperties(String propertiespath) {
+	public parseproperties(String propertiespath) {
 		this.loadProperties(propertiespath);
 	}
 
@@ -44,7 +44,7 @@ public class ParseProperties {
 	}
 
 	public static void main(String[] args) {
-		ParseProperties a = new ParseProperties("D:/esclipse/workspace/Gllys_Automation/tools/test.properties");
+		parseproperties a = new parseproperties("D:/esclipse/workspace/Gllys_Automation/tools/test.properties");
 
 		System.out.println(a.getValue("password"));
 	}

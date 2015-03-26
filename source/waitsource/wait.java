@@ -7,11 +7,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-public class Wait {
+public class wait {
 	private WebDriver driver;//����driver
     private int timeout =30; //���峬ʱʱ��Ϊ10S
 	
-	public Wait(WebDriver driver){
+	public wait(WebDriver driver){
 		this.driver = driver;//����Ҫʹ��This,this��ָ������driverΪǰ�����webdriver�����Ǻ����driver
         //PageFactory .initElements(driver, this);	-----> ���ҳ��Ԫ�ع��ڵ�����	
 	}
