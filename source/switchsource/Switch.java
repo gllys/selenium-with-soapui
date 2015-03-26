@@ -1,4 +1,4 @@
-package switch_source;
+package switchsource;
 import java.util.Set;
 
 import org.openqa.selenium.WebDriver;

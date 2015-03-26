@@ -1,8 +1,10 @@
 package soapui.login;
-import datasource.browserstype;
-import datasource.browsersset;
 
-import dosource.Do;
+import datasource.*;
+import dosource.*;
+
+
+
 //import wait_source.Wait;
 
 public class login {

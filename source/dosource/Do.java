@@ -1,4 +1,4 @@
-package DO_source;
+package dosource;
 
 import java.util.List;
 
@@ -6,10 +6,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import read_properties.ParseProperties;
-import wait_source.Wait;;
+import readproperties.ParseProperties;
+import waitsource.Wait;;
 
-public class DO {
+public class Do {
 
 	private WebDriver driver;
 	private ParseProperties locator = new ParseProperties(System.getProperty("user.dir")+"tools\\locators.properties"); 
@@ -39,7 +39,7 @@ public class DO {
 		this.waiter = waiter;
 	}
 
-	public DO(WebDriver driver){
+	public Do(WebDriver driver){
 		this.driver = driver;	
 		waiter = new Wait(driver);
 	}

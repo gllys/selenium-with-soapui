@@ -1,4 +1,4 @@
-package data_source;
+package datasource;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,16 +12,16 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import data_source.BrowersType; //ö�ٳ�ʼ��
+import datasource.browserstype; //ö�ٳ�ʼ��
 
-public class browers_set {
+public class browsersset {
 
 	public WebDriver web_driver = null; // driver��ʼ��
 	private FirefoxProfile firefoxprofile = null;   //firefox��ʼ����firefox�������÷�ʽ��ʹ��profile����
 	private static DesiredCapabilities caps = null; // ��������ó�ʼ����IE��CHROME
 	private String projectpath = System.getProperty("user.dir"); // ��Ŀ·�����ã��ӽ�ʹ��
 
-	public browers_set(BrowersType browserstype) {
+	public browsersset(browserstype browserstype) {
 		switch (browserstype) // ö�ٷ����ж�ѭ��
 		{
 		case firefox:
