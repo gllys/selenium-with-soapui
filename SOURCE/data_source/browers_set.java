@@ -12,34 +12,34 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import data_source.BrowersType; //Ã¶¾Ù³õÊ¼»¯
+import data_source.BrowersType; //Ã¶ï¿½Ù³ï¿½Ê¼ï¿½ï¿½
 
 public class browers_set {
 
-	public WebDriver web_driver = null; // driver³õÊ¼»¯
-	private FirefoxProfile firefoxprofile = null;   //firefox³õÊ¼»¯£¬firefoxÌØÓÐÅäÖÃ·½Ê½£¬Ê¹ÓÃprofileÅäÖÃ
-	private static DesiredCapabilities caps = null; // ä¯ÀÀÆ÷ÉèÖÃ³õÊ¼»¯£¬IE£¬CHROME
-	private String projectpath = "D:\\esclipse\\workspace\\Gllys_Automation"; // ÏîÄ¿Â·¾¶ÅäÖÃ£¬¼Ó½ÓÊ¹ÓÃ
+	public WebDriver web_driver = null; // driverï¿½ï¿½Ê¼ï¿½ï¿½
+	private FirefoxProfile firefoxprofile = null;   //firefoxï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½firefoxï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã·ï¿½Ê½ï¿½ï¿½Ê¹ï¿½ï¿½profileï¿½ï¿½ï¿½ï¿½
+	private static DesiredCapabilities caps = null; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã³ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½IEï¿½ï¿½CHROME
+	private String projectpath = System.getProperty("user.dir"); // ï¿½ï¿½Ä¿Â·ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½ï¿½Ó½ï¿½Ê¹ï¿½ï¿½
 
 	public browers_set(BrowersType browserstype) {
-		switch (browserstype) // Ã¶¾Ù·½·¨ÅÐ¶ÏÑ­»·
+		switch (browserstype) // Ã¶ï¿½Ù·ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½Ñ­ï¿½ï¿½
 		{
 		case firefox:
-			File firebug = new File(projectpath + "/tools/firebug-2.0.7.xpi");     // firefoxÌØÓÐ·½·¨¼ÓÈëÌØÓÐÏîÎÄ¼þ²å¼þ¶ÓÁÐ
+			File firebug = new File(projectpath + "/tools/firebug-2.0.7.xpi");     // firefoxï¿½ï¿½ï¿½Ð·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			File firepath = new File(projectpath+ "/tools/FireXPath-0.9.7.1.xpi"); 
-			firefoxprofile = new FirefoxProfile();                                 // ½«ÉèÖÃµÄprofile¸³ÓèÐÂprofile³õÊ¼»¯
+			firefoxprofile = new FirefoxProfile();                                 // ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½profileï¿½ï¿½ï¿½ï¿½ï¿½ï¿½profileï¿½ï¿½Ê¼ï¿½ï¿½
 			try {
-				firefoxprofile.addExtension(firebug);                              //¼ÓÈë²å¼þ£¬ÉúÐ§
-				firefoxprofile.addExtension(firepath);                             //¼ÓÈë²å¼þ£¬ÉúÐ§
-				firefoxprofile.setPreference("webdriver.accept.untrusted.certs", "true"); //ä¯ÀÀÆ÷ÅäÖÃ
-				firefoxprofile.setPreference("extensions.firebug.currentVersion", "2.0.7");//È·ÈÏfirebugµ±Ç°°æ±¾·ÀÖ¹ÌáÊ¾³åÍ»
+				firefoxprofile.addExtension(firebug);                              //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§
+				firefoxprofile.addExtension(firepath);                             //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§
+				firefoxprofile.setPreference("webdriver.accept.untrusted.certs", "true"); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+				firefoxprofile.setPreference("extensions.firebug.currentVersion", "2.0.7");//È·ï¿½ï¿½firebugï¿½ï¿½Ç°ï¿½æ±¾ï¿½ï¿½Ö¹ï¿½ï¿½Ê¾ï¿½ï¿½Í»
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			web_driver = new FirefoxDriver(firefoxprofile);//½«profile¼ÓÔØÔÚdriver¾ä±úÖÐ
-			web_driver.manage().window().maximize();//µ÷ÓÃ¾ä±úºó×î´ó»¯´°¿Ú·½·¨
-			break;//Ìø³ö¸ÃÌõÂß¼­
+			web_driver = new FirefoxDriver(firefoxprofile);//ï¿½ï¿½profileï¿½ï¿½ï¿½ï¿½ï¿½ï¿½driverï¿½ï¿½ï¿½ï¿½ï¿½
+			web_driver.manage().window().maximize();//ï¿½ï¿½ï¿½Ã¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó»¯´ï¿½ï¿½Ú·ï¿½ï¿½ï¿½
+			break;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¼ï¿½
 		case ie:
 			System.setProperty("webdriver.ie.driver", projectpath+ "/tools/IEDriverServer64.exe");
 			caps = DesiredCapabilities.internetExplorer();
@@ -54,10 +54,10 @@ public class browers_set {
 		case chrome:
 			System.setProperty("webdriver.chrome.driver", projectpath+ "/tools/chromedriver.exe");
 			caps = DesiredCapabilities.chrome();
-			caps.setCapability("chrome.switches",Arrays.asList("--start-maximized")); // ×î´ó»¯browser
+			caps.setCapability("chrome.switches",Arrays.asList("--start-maximized")); // ï¿½ï¿½ï¿½browser
 			// capabilities.setCapability("chrome.switches",
 			// Arrays.asList("--proxy-server=http://your-proxy-domain:4443"));
-			//ÉèÖÃ´úÀí
+			//ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½
 			web_driver = new ChromeDriver(caps);
 			web_driver.manage().window().maximize();
 			break;

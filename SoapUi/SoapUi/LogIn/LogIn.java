@@ -27,12 +27,12 @@ public class LogIn {
 		
 
 	}
-}
 
-//	public static void main(String arg[]) {
-//       
-//		System.out.println(new LogIn().LogInTest());
-//		
-//	}
-//
-//}
+
+	public static void main(String arg[]) {
+       
+		System.out.println(new LogIn().LogInTest());
+		
+	}
+
+}
