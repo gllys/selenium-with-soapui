@@ -43,10 +43,10 @@ public class parseproperties {
 		return value;
 	}
 
-	public static void main(String[] args) {
-		parseproperties a = new parseproperties("D:/esclipse/workspace/Gllys_Automation/tools/test.properties");
-
-		System.out.println(a.getValue("password"));
-	}
+//	public static void main(String[] args) {
+//		parseproperties a = new parseproperties("D:/esclipse/workspace/Gllys_Automation/tools/test.properties");
+//
+//		System.out.println(a.getValue("password"));
+//	}
 
 }

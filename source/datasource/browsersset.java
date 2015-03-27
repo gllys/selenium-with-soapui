@@ -52,7 +52,7 @@ public class browsersset {
 			web_driver.manage().window().maximize();
 			break;
 		case chrome:
-			System.setProperty("webdriver.chrome.driver", projectpath+ "/tools/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver","C:/Users/Administrator/git/selenium-with-soapui/tools/chromedriver.exe");
 			caps = DesiredCapabilities.chrome();
 			caps.setCapability("chrome.switches",Arrays.asList("--start-maximized")); // ���browser
 			// capabilities.setCapability("chrome.switches",

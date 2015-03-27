@@ -12,7 +12,7 @@ import waitsource.wait;;
 public class Do {
 
 	private WebDriver driver;
-	private parseproperties locator = new parseproperties(System.getProperty("user.dir")+"tools\\locators.properties"); 
+	private parseproperties locator = new parseproperties("C:\\Users\\Administrator\\git\\selenium-with-soapui\\tools\\locators.properties"); 
 	private wait waiter;
 	
 	public WebDriver getDriver() {
@@ -59,9 +59,6 @@ public class Do {
 	public void waitForElementIsEnable(String locatorname){
 		waiter.waitForElementIsEnable(locator.getValue(locatorname));
 	}
-	
-
-	
 	public void waitFor(long timeout){
 		waiter.waitFor(timeout);
 	}
