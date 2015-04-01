@@ -19,13 +19,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import readproperties.parseproperties;
+import readproperties.ParseProperties;
 import waitsource.wait;;
 
 public class Do {
 
 	private WebDriver driver;
-	private parseproperties locator = new parseproperties("C:\\Users\\Administrator\\git\\selenium-with-soapui\\tools\\locators.properties"); 
+	private ParseProperties locator = new ParseProperties("C:\\Users\\Administrator\\git\\selenium-with-soapui\\tools\\locators.properties"); 
 	private wait waiter;
 	
 	public WebDriver getDriver() {
@@ -36,11 +36,11 @@ public class Do {
 		this.driver = driver;
 	}
 
-	public parseproperties getLocator() {
+	public ParseProperties getLocator() {
 		return locator;
 	}
 
-	public void setLocator(parseproperties locator) {
+	public void setLocator(ParseProperties locator) {
 		this.locator = locator;
 	}
 

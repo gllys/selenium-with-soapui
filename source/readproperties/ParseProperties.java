@@ -22,12 +22,12 @@ import java.io.UnsupportedEncodingException;
 import java.util.Properties;
 
 
-public class parseproperties {
+public class ParseProperties {
 
 	private Properties pro = new Properties();
 	String value = null;
 
-	public parseproperties(String propertiespath) {
+	public ParseProperties(String propertiespath) {
 		this.loadProperties(propertiespath);
 	}
 

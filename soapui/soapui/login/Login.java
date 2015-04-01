@@ -25,7 +25,7 @@ import dosource.*;
 
 //import wait_source.Wait;
 
-public class login {
+public class Login {
 	public static final String URL = "http://www.piaotai.com";
 	
 	private Do du;
@@ -34,7 +34,7 @@ public class login {
 	public  String LogInTest()
 	
 	{
-		browsersset browser = new browsersset(browserstype.chrome);
+		BrowsersSet browser = new BrowsersSet(BrowsersType.chrome);
 		
 		du = new Do(browser.web_driver);   
 		du.getDriver().get(URL);

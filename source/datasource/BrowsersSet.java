@@ -24,17 +24,17 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import datasource.browserstype; //ö�ٳ�ʼ��
+import datasource.BrowsersType; //ö�ٳ�ʼ��
 
-public class browsersset {
+public class BrowsersSet {
 
 	public WebDriver web_driver = null; // driver��ʼ��
 	private FirefoxProfile firefoxprofile = null;   //firefox��ʼ����firefox�������÷�ʽ��ʹ��profile����
 	private static DesiredCapabilities caps = null; // ��������ó�ʼ����IE��CHROME
 	private String projectpath = System.getProperty("user.dir"); // ��Ŀ·�����ã��ӽ�ʹ��
 
-	public browsersset(browserstype browserstype) {
-		switch (browserstype) // ö�ٷ����ж�ѭ��
+	public BrowsersSet(BrowsersType BrowsersType) {
+		switch (BrowsersType) // ö�ٷ����ж�ѭ��
 		{
 		case firefox:
 			File firebug = new File(projectpath + "/tools/firebug-2.0.7.xpi");     // firefox���з��������������ļ��������

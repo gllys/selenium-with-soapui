@@ -14,7 +14,7 @@
 package datasource;
 
 
-	public enum browserstype {
+	public enum BrowsersType {
 		ie, firefox, chrome;
 	}
 
