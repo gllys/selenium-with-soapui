@@ -29,6 +29,7 @@ public class Login {
 	public static final String URL = "http://www.piaotai.com";
 	
 	private Do du;
+
 	
 
 	public  String LogInTest()
